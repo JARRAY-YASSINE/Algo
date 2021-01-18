@@ -1,6 +1,6 @@
 ALGORITHM Sentence
 VAR
-   i, j, k : INTEGER:= 0;
+   i INTEGER:= 0;
    S_length, S_words, S_vowels: INTEGER:= 0;
    Sents : string[100];
 BEGIN
