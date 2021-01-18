@@ -1,0 +1,25 @@
+ALGORITHM Sentence
+VAR
+   i, j, k : INTEGER:= 0;
+   S_length, S_words, S_vowels: INTEGER:= 0;
+   Sents : string[100];
+BEGIN
+      WRITE("Tap your sentence :");
+      READ(Sents);
+
+   WHILE( Sents[i] <> "." AND i<100 ) DO
+
+   IF ( Sents[i] <> " ") 
+      S_length:= S_length  +1;
+   
+   ELSE IF ( Sents[i] == {'a','A','o','O','i','I','e','E','u','U'})
+      S_vowels:= S_vowels +1;
+
+   ELSE 
+      S_words:= S_words +1;
+
+   END_IF
+
+   i:= i+1;
+   END_WHILE
+END
