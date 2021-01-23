@@ -1,0 +1,37 @@
+ALGORITHM Dot_product
+VAR
+    rslt : BOOLEAN;
+    i,j : INTEGER;
+    vr1,vr2 : ARRAY_OF INTEGER[10];
+    sum : INTEGER :=  0;
+BEGIN
+
+
+    FOR i FROM 0 TO vr1.length-1 DO
+        rslt := FALSE;
+        FOR j FROM 0 TO vr2.length-1 DO
+            IF(vr1[i] = vr2[j]) THEN
+                rslt := TRUE;
+                BREAK;
+            END
+        END_FOR
+        IF (NOT rslt) THEN
+            sum := sum + vr1[i];
+        END_IF
+    END_FOR
+
+    FOR i FROM 0 TO vr2.length-1 DO
+        rslt := FALSE;
+        FOR j FROM 0 TO vr1.length-1 DO
+            IF(vr2[i] = vr1[j]) THEN
+                rslt := TRUE;
+                BREAK;
+            END
+        END_FOR
+        IF (NOT rslt) THEN
+            sum := sum + vr2[i];
+        END_IF
+    END_FOR
+
+    Write(sum);
+END
